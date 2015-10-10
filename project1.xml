@@ -1,34 +1,46 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_whileUntil" id="875" inline="false" x="-537" y="-405">
+  <block type="controls_whileUntil" id="1005" inline="false" x="-460" y="-407">
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
-      <block type="sensor_button" id="883">
+      <block type="sensor_button" id="1013">
         <field name="OBJECT">ENTER</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="led_select" id="899" inline="true">
-        <field name="ACTION">FLASH</field>
-        <value name="LED">
-          <block type="math_number" id="926">
-            <field name="NUM">0</field>
-          </block>
-        </value>
+      <block type="oled_cleardisplay" id="1035">
         <next>
-          <block type="led_select" id="918" inline="true">
-            <field name="ACTION">FLASH</field>
-            <value name="LED">
-              <block type="math_number" id="925">
-                <field name="NUM">5</field>
+          <block type="oled_setcursor" id="1050" inline="true">
+            <value name="STARTX">
+              <block type="math_number" id="1057">
+                <field name="NUM">10</field>
+              </block>
+            </value>
+            <value name="STARTY">
+              <block type="math_number" id="1058">
+                <field name="NUM">10</field>
               </block>
             </value>
             <next>
-              <block type="robot_delay" id="931" inline="true">
-                <value name="DELAY">
-                  <block type="math_number" id="938">
-                    <field name="NUM">5000</field>
+              <block type="oled_drawtext" id="1084">
+                <field name="TEXT">leftFront=</field>
+                <next>
+                  <block type="oled_drawnumber" id="1125" inline="true">
+                    <value name="NUMBER">
+                      <block type="sensor_object" id="1169">
+                        <field name="OBJECT">LEFTFRONT</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="robot_delay" id="1171" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="1178">
+                            <field name="NUM">200</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
                   </block>
-                </value>
+                </next>
               </block>
             </next>
           </block>
