@@ -35,31 +35,5 @@
         </next>
       </block>
     </statement>
-    <next>
-      <block type="movement_forward" id="949">
-        <next>
-          <block type="robot_delay" id="974" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="983">
-                <field name="NUM">3000</field>
-              </block>
-            </value>
-            <next>
-              <block type="movement_reverse" id="966">
-                <next>
-                  <block type="robot_delay" id="976" inline="true">
-                    <value name="DELAY">
-                      <block type="math_number" id="984">
-                        <field name="NUM">3000</field>
-                      </block>
-                    </value>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </next>
   </block>
 </xml>
