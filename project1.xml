@@ -1,25 +1,36 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="836" inline="true" x="-284" y="-247">
-    <value name="TIMES">
-      <block type="math_number" id="843">
-        <field name="NUM">5</field>
+  <block type="controls_whileUntil" id="875" inline="false" x="-279" y="-351">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="883">
+        <field name="OBJECT">UP</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="led_select" id="809" inline="true">
+      <block type="led_select" id="899" inline="true">
         <field name="ACTION">ON</field>
         <value name="LED">
-          <block type="math_number" id="816">
-            <field name="NUM">15</field>
+          <block type="math_number" id="926">
+            <field name="NUM">0</field>
           </block>
         </value>
         <next>
-          <block type="robot_delay" id="819" inline="true">
-            <value name="DELAY">
-              <block type="math_number" id="826">
-                <field name="NUM">1000</field>
+          <block type="led_select" id="918" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="math_number" id="925">
+                <field name="NUM">5</field>
               </block>
             </value>
+            <next>
+              <block type="robot_delay" id="931" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="938">
+                    <field name="NUM">100</field>
+                  </block>
+                </value>
+              </block>
+            </next>
           </block>
         </next>
       </block>
