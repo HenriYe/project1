@@ -8,7 +8,59 @@
           </block>
         </value>
         <next>
-          <block type="movement_stop" id="540"></block>
+          <block type="movement_left" id="616">
+            <next>
+              <block type="robot_delay" id="629" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="638">
+                    <field name="NUM">3000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_right" id="627">
+                    <next>
+                      <block type="robot_delay" id="631" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="652">
+                            <field name="NUM">2500</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="movement_reverse" id="662">
+                            <next>
+                              <block type="robot_delay" id="680" inline="true">
+                                <value name="DELAY">
+                                  <block type="math_number" id="689">
+                                    <field name="NUM">2600</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="movement_forward" id="672">
+                                    <next>
+                                      <block type="robot_delay" id="682" inline="true">
+                                        <value name="DELAY">
+                                          <block type="math_number" id="696">
+                                            <field name="NUM">2400</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="movement_stop" id="540"></block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
